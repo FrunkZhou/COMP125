@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="assignment1.css">
+	<title>COMP125 Assignment 1</title>
+	<meta charset="utf-8">
+	<meta name="author" content="Frank Zhou">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<div id="mainContainer">
+<!-- navigation tabs -->
+	<button class="headertabs" id="default" onclick="openTab('imperial', this)">IMPERIAL BMR CALCULATION</button>
+	<button class="headertabs" onclick="openTab('metric', this)">METRIC BMR CALCULATION</button>
+	
+<!-- main content -->
+	<!-- imperial calculation tab -->
+	<div id="imperial" class="tabcontents">
+		<form method="POST">
+			<fieldset>
+			<br />
+			<div class="txtrightalign">
+				<label for="genderImp">GENDER</label>
+			</div>
+			<div class="txtleftalign">
+				<select id="genderImp">
+				<option value="female">FEMALE</option>				
+				<option value="male">MALE</option>				
+			</select> 
+			</div>
+			<div class="txtrightalign">
+				<label for="ageImp">AGE</label>
+			</div>
+			<div class="txtleftalign">
+				<input type="number" id="ageImp" min="0" class="ageMeasurement"/>
+				<span id="ageErrorImp"></span>
+			</div>
+			<div class="txtrightalign">
+				YOUR HEIGHT				
+			</div>
+			<div class="txtleftalign">
+				&nbsp;
+				<span id="heightErrorImp"></span>
+			</div>
+			<div class="txtrightalign">
+				<label for="heightinfeet">FEET</label>
+			</div>
+			<div class="txtmeasurealign">
+				<input type="number" id="heightinfeet" min="0" class="measurements" placeholder="0" />
+			</div>
+			<div class="txtinbetweenalign">
+				<label for="heightininches">INCHES</label>		
+			</div>
+			<div class="txtmeasurealign">
+				<input type="number" id="heightininches" min="0" class="measurements" placeholder="0" />
+			</div>
+			<div class="txtrightalign">
+				YOUR WEIGHT 				
+			</div>
+			<div class="txtleftalign">
+				&nbsp;
+				<span id="weightErrorImp"></span>
+			</div>
+			<div class="txtrightalign">
+				<label for="weightinstones" >STONES</label>
+			</div>
+			<div class="txtmeasurealign">
+				<input type="number" id="weightinstones" min="0" class="measurements" placeholder="0" /> 
+			</div>
+			<div class="txtinbetweenalign">
+				<label for="weightinpounds">POUNDS</label>
+			</div>
+			<div class="txtmeasurealign">
+				<input type="number" id="weightinpounds" min="0" class="measurements" placeholder="0">
+			</div>
+			<div class="txtrightalign">
+				Select your activity level:
+			</div>
+			<div class="txtleftalign">
+				<input type="radio" id="lvl1Imp" value="1.53" name="levelImp"> Sedentary or light activity <br />
+				<input type="radio" id="lvl2Imp" value="1.76" name="levelImp"> Active or moderately active <br />
+				<input type="radio" id="lvl3Imp" value="2.25" name="levelImp"> Vigorously active <br />
+			</div>
+			<div class="txtrightalign" style="margin: 0">
+			&nbsp;
+			</div>
+			<div class="hiddentext">
+			<span id="lvlErrorImp"></span>
+			</div>
+			<br />
+			<div class="aligncenter">
+				<button class="submitbutton" type="button" id="convertImperial">Calculate BMR</button>
+			</div>
+			</fieldset>
+		</form>
+		<br />
+		<span align="center" id="calctextImp"></span>
+	</div>
+	<!-- metric calculation tab -->
+	<div id="metric" class="tabcontents">
+		<form>	
+			<fieldset>
+			<br />
+			<div class="txtrightalign">
+			<label for="genderMet">GENDER</label>
+			</div>
+			<div class="txtleftalign">
+			<select id="genderMet">	
+			<option value="female">FEMALE</option>
+			<option value="male">MALE</option>		
+			</select> 
+			</div>
+			<div class="txtrightalign">
+			<label for="ageMet">AGE</label>
+			</div>
+			<div class="txtleftalign">
+			<input type="number" id="ageMet" min="0" class="ageMeasurement"> 
+			<span id="ageErrorMet"></span>
+			</div>
+			<div class="txtrightalign">
+			YOUR HEIGHT
+			</div>
+			<div class="txtleftalign">
+			&nbsp;
+			<span id="heightErrorMet"></span>
+			</div>
+			<div class="txtrightalign">
+			<label for="heightinmeters">METERS</label>
+			</div>
+			<div class="txtmeasurealign">
+			<input type="number" id="heightinmeters" min="0" class="measurements" placeholder="0">
+			</div>
+			<div class="txtinbetweenalign">
+			<label for="heightincentimeters">CENTIMETERS</label>		
+			</div>
+			<div class="txtmeasurealign">
+			<input type="number" id="heightincentimeters" min="0" class="measurements" placeholder="0">
+			</div>
+			<div class="txtrightalign">
+			YOUR WEIGHT 
+			</div>
+			<div class="txtleftalign">
+			&nbsp;
+			<span id="weightErrorMet"></span>
+			</div>
+			<div class="txtrightalign">
+			<label for="weightinkilograms" >KILOGRAMS</label>
+			</div>
+			<div class="txtmeasurealign">
+			<input type="number" id="weightinkilograms" min="0" class="measurements" placeholder="0"> 
+			</div>
+			<div class="txtinbetweenalign">
+			<label for="weightingrams">GRAMS</label>
+			</div>
+			<div class="txtmeasurealign">
+			<input type="number" id="weightingrams" min="0" class="measurements" placeholder="0">
+			</div>
+			<div class="txtrightalign">
+			Select your activity level:
+			</div>
+			<div class="txtleftalign">
+			<input type="radio" id="lvl1Met" value="1.53" name="levelMet"> Sedentary or light activity <br />
+			<input type="radio" id="lvl2Met" value="1.76" name="levelMet"> Active or moderately active <br />
+			<input type="radio" id="lvl3Met" value="2.25" name="levelMet"> Vigorously active <br />
+			</div>
+			<div class="txtrightalign" style="margin: 0">
+			&nbsp;
+			</div>
+			<div class="hiddentext">
+			<span id="lvlErrorMet"></span>
+			</div>
+			<br />
+			<div class="aligncenter">
+			<button class="submitbutton" id="convertMetric" type="button">Calculate BMR</button>
+			</div>
+			</fieldset>
+		</form>
+		<br />
+		<span align="center" id="calctextMet"></span>
+	</div> 
+</div>
+	
+<script src="assignment1.js"></script>
+</body>
+</html>

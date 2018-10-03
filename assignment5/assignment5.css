@@ -1,0 +1,114 @@
+﻿/* apply a natural box layout model to all elements */
+* {
+    box-sizing: border-box;
+}
+
+/* reset rules */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* general style*/
+html, body {
+    height: 100%;
+    width: 100%;
+	font-family: 'Roboto', sans-serif;
+}
+
+.bodyContainer {
+    height: 100%;
+    width: 100%;
+    margin-left: 150px;
+    background-image: url(images/background.png);
+    background-repeat: repeat;
+    margin: 0;
+}
+
+/* end of general */
+
+/* nav styles */
+.navSideBar {
+    position: fixed;
+    height: 100%;
+    background-color: #142739; /* Dark dark blue 15% */
+    width: 150px;
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin-top: 250px;
+}
+
+nav ul li {
+    margin-top: 40px;
+    text-align: center;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+/* end of nav */
+
+#mole {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    cursor: pointer;
+    z-index: 2;
+    user-select: none;
+}
+
+#mole:hover {
+    content: url(images/molehover.png);
+}
+
+#mole:active {
+    content: url(images/moledead.png);
+}
+
+/* canvas */
+
+.gameContainer {
+    margin-left: 220px;
+    width: 1082px;
+    height: 742px;
+    position: relative;
+}
+
+canvas {
+    position: absolute;
+    z-index: 1;
+}
+
+/* footer style */
+.footerContainer {
+    user-select: none;
+    height: 25px;
+    background: #333;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    margin: auto;
+    color: orangered;
+    text-align: center;
+    padding: 5px;
+}
+/* end of footer */

@@ -1,0 +1,125 @@
+body {
+	height = 100%;
+	background-image: url("bggradient.jpg");
+}
+
+#BodyContainer {
+	min-height: 100%;
+	padding-bottom: 20px; 
+	margin-bottom: -20px;
+}
+#formContainer {
+	height: 150px;
+	width: 600px;
+	background-color: red;
+	margin: auto;
+	overflow: auto;	
+}
+
+#tableContainer{
+    margin: auto;
+    overflow: auto;
+    height: 500px;
+    width: 1000px;
+    margin-top: 30px;
+	background-color: silver;
+}
+
+.formDescrip {
+	display: inline-block;
+	height: 50px;
+	width: 45%;
+	float: left;
+}
+
+.formLabel {
+	float:right;
+	margin-top: 15px;
+}
+
+.formField {
+	display: inline-block; 
+	height: 50px;
+	width: 15%;
+	float: left;
+}
+
+.formLength {
+	width: 50%;
+	text-align: right;
+	margin-top: 15px;
+	margin-left: 15px;
+}
+
+.errorField {
+	display: inline-block;
+	height: 50px;
+	width:35%;
+	float: left;
+}
+
+.errorMessage {
+	float: left;
+	margin-top: 15px;
+}
+
+.tableButton{
+	background-color: #29293d; /* dark grey */
+	color: white;
+	border: none;
+	outline: none;
+	padding: 12px;
+	font-size: 16px;
+	cursor: pointer;
+	text-decoration: none;
+	width: 140px;
+}
+
+.buttonArea {
+    float: left;
+    text-align: center;
+    width: 100%;
+}
+
+.tableButton:hover {
+    background-color: blue;
+}
+span {
+	font-size: 16px;
+}
+
+table, td {
+    border: 1px solid black;	
+	text-align: center;
+}
+
+table {
+	width: 100%;
+	height: 100%
+}
+
+td:hover {
+    background-color: red;
+}
+
+#formedTable {
+	background-color: silver;
+}
+
+.footerContainer {
+	height:40px;
+	width: 52%;
+	background: #333;
+	position:absolute;
+	margin-top: 20px;
+	left:0;
+	right:0;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.footertext {
+	color: orange;
+	font: normal 13px verdana, sans-serif;
+	text-align = center;
+}

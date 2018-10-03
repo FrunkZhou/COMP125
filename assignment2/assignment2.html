@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="assignment2.css">
+	<title>COMP125 Assignment 2</title>
+	<meta charset="utf-8">
+	<meta name="author" content="Frank Zhou">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<div id="BodyContainer">
+<br /> <br />
+<p align="center">Please enter the number of columns and rows to create your table.</p>
+<div id="formContainer">
+	<form method="POST">
+		<div class="formDescrip">
+			<label for="columns"><span class="formLabel">Number of Columns</span></label>
+		</div>
+		<div class="formField">
+			<input type="number" id="column" min="0" class="formLength" placeholder="0">
+		</div>
+		<div class="errorField">
+			<span class="errorMessage" id="columnError"></span>
+		</div>
+		<div class="formDescrip">
+			<label for="rows"><span class="formLabel">Number of Rows</span></label>
+		</div>
+		<div class="formField">
+			<input type="number" id="row" min="0" class="formLength" placeholder="0">
+		</div>
+		<div class="errorField">
+			<span class="errorMessage" id="rowError"></span>
+		</div>
+		<div class="buttonArea">
+			<button class="tableButton" type="button" id="formTable" align="center">Create Table</button>
+		</div>
+    </form>
+</div>
+<br /> <br /> <br />
+    
+<div id="tableContainer">
+</div>
+
+</div>
+<div class="footerContainer">
+<footer>
+<p class="footertext" align="center">&copy; Copyright Frank Zhou 2018 All rights reserved.</p>
+</footer>
+</div>
+<script src="assignment2.js"></script>
+</body>
+</html>

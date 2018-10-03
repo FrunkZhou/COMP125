@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery Using JQuery &#38; AJAX</title>
+    <link rel="stylesheet" href="assignment6.css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="assignment6.js"></script>
+</head>
+
+<body>
+    <div class="navSideBar">
+        <nav>
+            <ul>
+                <li><a href="../home.html">Home</a></li>
+                <li><a href="../assignment1/assignment1.html">Assignment 1</a></li>
+                <li><a href="../assignment2/assignment2.html">Assignment 2</a></li>
+                <li><a href="../assignment3/assignment3.html">Assignment 3</a></li>
+                <li><a href="../assignment4/assignment4.html">Assignment 4</a></li>
+                <li><a href="../assignment5/assignment5.html">Assignment 5</a></li>
+                <li><a href="../assignment6/assignment6.html">Assignment 6</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="bodyContainer">
+        <p class="introText"><br />Image Gallery</p>
+        <div class="folderButtons">
+            <button type="button" class="btn" id="folder1">Folder 1</button>
+        </div>
+        <div style="float:left;position:relative;top:250px;left:50px;"><button type="button" class="btn" id="folder2">Folder 2</button></div>
+        <div style="float:left;position:relative;top:350px;left:-100px;"><button type="button" class="btn" id="empty">Empty</button></div>
+        <div id="mainGallery">
+            <img id="mainImage1" style="position: absolute;"/>
+            <img id="mainImage2" style="position: absolute;"/>
+            <div id="moveLeftIcon">
+                <i class="fa fa-angle-left fa-3x"></i>
+            </div>
+             <div id="moveRightIcon">
+            <i class="fa fa-angle-right fa-3x"></i>
+            </div>
+        </div>
+        <div id="thumbnailGallery">
+            <div class="thumbnail">
+                <img class="tb1" />
+                <img class="tb2" />
+            </div>
+            <div class="thumbnail">
+                <img class="tb1" />
+                <img class="tb2" />
+            </div>
+            <div class="thumbnail">
+                <img class="tb1" />
+                <img class="tb2" />
+            </div>
+            <div class="thumbnail">
+                <img class="tb1" />
+                <img class="tb2"  />
+            </div>
+            <div class="thumbnail">
+                <img class="tb1" />
+                <img class="tb2" />
+            </div>
+        </div>
+    </div>
+    <div class="footerContainer">
+            &copy; Copyright Frank Zhou 2018 All rights reserved.
+    </div>
+</body>
+</html>

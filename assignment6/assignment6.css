@@ -1,0 +1,196 @@
+﻿/* apply a natural box layout model to all elements */
+* {
+    box-sizing: border-box;
+}
+
+/* reset rules */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* general style*/
+html, body {
+    height: 100%;
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+}
+
+.bodyContainer {
+    margin-left: 150px;
+    height: 100%;
+    width: auto;
+    background-color: teal;
+}
+
+.introText {
+    font: inherit;
+    font-size: 30px;
+    color: azure;
+    text-align: center;
+}
+/* end of general */
+
+/* nav styles */
+.navSideBar {
+    position: fixed;
+    height: 100%;
+    background-color: #142739; /* Dark dark blue 15% */
+    width: 150px;
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin-top: 250px;
+}
+
+    nav ul li {
+        margin-top: 40px;
+        text-align: center;
+    }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+/* end of nav */
+.folderButtons{
+    float: left;
+    position: relative;
+    top: 150px;
+    left: 200px;
+}
+
+.btn {
+    font-size: 20px;
+    border: none;
+    height: 30px;
+    width: 150px;
+    background-color: rgb(0, 0, 179);
+    cursor: pointer;
+    color: white;
+    border-radius: 7px;
+}
+
+.btn:hover {
+    background-color: magenta;
+}
+
+.btn:active {
+    position: relative;
+    top: 2px;
+    left: 2px;
+}
+
+
+/* Gallery -- Right Side -- */
+
+
+#mainGallery {
+    display: block;
+    position: relative;
+    border: 2px solid black;
+    width: 515px;
+    height: 515px;
+    margin: 40px auto;
+    user-select: none;
+}
+
+#moveLeftIcon {
+    float: left;
+    z-index: 3;
+    cursor: pointer;
+    position: absolute;
+    top: 45%;
+    user-select: none;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    opacity: 0;
+    color: white;
+    transition: opacity 1s ease-in-out, background-color 1s ease-in-out;
+}
+
+#moveLeftIcon:hover {
+    background-color: black;
+    opacity: 0.6;
+    color: white;
+}
+
+#moveRightIcon:hover {
+    background-color: black;
+    opacity: 0.6;
+    color: white;
+}
+
+#moveRightIcon {
+    float: right;
+    z-index: 3;
+    position: absolute;
+    cursor: pointer;
+    top: 45%;
+    left: 90.5%;
+    user-select: none;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    opacity: 0;
+    color: white;
+    transition: opacity 1s ease-in-out, background-color 1s ease-in-out;
+}
+
+#thumbnailGallery {
+    display: block;
+
+    text-align: center;
+    margin-top: -35px;
+}
+
+.thumbnail {
+    display: inline-block;
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border: 2px solid black;
+}
+
+.tb1 {
+    position: absolute;
+    left: 0px;
+}
+
+.tb2 {
+    position: absolute;
+    left: 0px;
+}
+
+/* footer style */
+.footerContainer {
+    user-select: none;
+    height: 25px;
+    background: #333;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    margin: auto;
+    color: orangered;
+    text-align: center;
+    padding: 5px;
+}
+/* end of footer */
